@@ -1,4 +1,3 @@
-// src/modules/auth/auth.utils.ts
 import jwt from 'jsonwebtoken';
 
 export const createToken = (

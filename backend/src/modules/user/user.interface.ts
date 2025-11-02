@@ -1,4 +1,3 @@
-// src/modules/user/user.interface.ts
 export type TUser = {
   email: string;
   password: string;

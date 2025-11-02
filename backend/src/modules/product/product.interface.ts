@@ -1,4 +1,3 @@
-// src/modules/product/product.interface.ts
 import { Types } from 'mongoose';
 
 export type TProduct = {
@@ -6,5 +5,5 @@ export type TProduct = {
   description: string;
   price: number;
   category: string;
-  seller: Types.ObjectId; // Reference to the User who created it
+  seller: Types.ObjectId; 
 };

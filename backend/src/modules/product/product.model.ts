@@ -1,6 +1,5 @@
-// src/modules/product/product.model.ts
 import { Schema, model } from 'mongoose';
-import { TProduct } from '../product.interface';
+import { TProduct } from './product.interface';
 
 const productSchema = new Schema<TProduct>({
   title: { type: String, required: true, trim: true },
@@ -10,7 +9,7 @@ const productSchema = new Schema<TProduct>({
   seller: {
     type: Schema.Types.ObjectId,
     required: true,
-    ref: 'User', // This creates a reference to the User model
+    ref: 'User',
   },
 }, { timestamps: true });
 

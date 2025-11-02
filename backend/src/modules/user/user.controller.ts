@@ -1,4 +1,3 @@
-// src/modules/user/user.controller.ts
 import { Request, Response } from 'express';
 import { UserServices } from './user.service';
 
@@ -7,12 +6,10 @@ const createUser = async (req: Request, res: Response) => {
     const userData = req.body;
     const result = await UserServices.createUserIntoDB(userData);
 
-    // Send a structured success response
     res.status(201).json({
       success: true,
       message: 'User created successfully!',
       data: {
-        // Explicitly map the fields to ensure password is not returned
         _id: result._id,
         email: result.email,
         role: result.role,
@@ -21,7 +18,6 @@ const createUser = async (req: Request, res: Response) => {
       },
     });
   } catch (error: any) {
-    // Send a structured error response
     res.status(500).json({
       success: false,
       message: 'An error occurred while creating the user.',

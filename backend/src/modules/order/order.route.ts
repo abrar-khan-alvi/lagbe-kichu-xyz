@@ -1,4 +1,3 @@
-// src/modules/order/order.route.ts
 import express from 'express';
 import auth from '../../middlewares/auth.middleware';
 import { OrderControllers } from './order.controller';

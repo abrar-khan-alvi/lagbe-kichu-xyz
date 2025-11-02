@@ -1,10 +1,10 @@
-// src/modules/order/order.service.ts
+
 import { Product } from '../product/product.model';
 import { TOrder } from './order.interface';
 import { Order } from './order.model';
 
 const createOrderIntoDB = async (buyerId: string, payload: { products: { productId: string, quantity: number }[], shippingAddress: string }) => {
-  // Fetch product details from the DB to ensure price integrity
+
   const productIds = payload.products.map(p => p.productId);
   const productsFromDB = await Product.find({ _id: { $in: productIds } });
 
@@ -18,7 +18,7 @@ const createOrderIntoDB = async (buyerId: string, payload: { products: { product
     return {
       productId: productDetail._id,
       quantity: p.quantity,
-      price: productDetail.price, // Use the server's price
+      price: productDetail.price, 
     };
   });
 

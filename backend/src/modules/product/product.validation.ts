@@ -1,4 +1,3 @@
-// src/modules/product/product.validation.ts
 import { z } from 'zod';
 
 export const createProductValidationSchema = z.object({

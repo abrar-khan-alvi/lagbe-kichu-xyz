@@ -1,4 +1,3 @@
-// src/modules/user/user.service.ts
 import { TUser } from './user.interface';
 import { User } from './user.model';
 

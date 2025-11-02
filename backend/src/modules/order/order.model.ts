@@ -1,4 +1,3 @@
-// src/modules/order/order.model.ts
 import { Schema, model } from 'mongoose';
 import { TOrder } from './order.interface';
 

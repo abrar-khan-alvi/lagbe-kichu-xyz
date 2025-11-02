@@ -1,11 +1,10 @@
-// src/modules/product/product.controller.ts
 import { Request, Response } from 'express';
 import { ProductServices } from './product.service';
 
-// Controller for creating a product
+
 const createProduct = async (req: Request, res: Response) => {
   try {
-    // The seller's ID is attached by our auth middleware
+
     const sellerId = req.user?.userId;
     const productData = req.body;
 
@@ -29,7 +28,7 @@ const createProduct = async (req: Request, res: Response) => {
   }
 };
 
-// Controller for fetching all products
+
 const getAllProducts = async (req: Request, res: Response) => {
   try {
     const result = await ProductServices.getAllProductsFromDB();
@@ -48,7 +47,7 @@ const getAllProducts = async (req: Request, res: Response) => {
   }
 };
 
-// Controller for updating a product
+
 const updateProduct = async (req: Request, res: Response) => {
   try {
     const { productId } = req.params;
@@ -75,7 +74,7 @@ const updateProduct = async (req: Request, res: Response) => {
   }
 };
 
-// Controller for deleting a product
+
 const deleteProduct = async (req: Request, res: Response) => {
   try {
     const { productId } = req.params;
@@ -96,7 +95,7 @@ const deleteProduct = async (req: Request, res: Response) => {
     res.status(500).json({ success: false, message: 'Failed to delete product', error: error.message });
   }
 };
-// Controller for fetching a single product
+
 const getSingleProduct = async (req: Request, res: Response) => {
   try {
     const { productId } = req.params;

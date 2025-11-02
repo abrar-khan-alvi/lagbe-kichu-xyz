@@ -1,4 +1,3 @@
-// src/modules/user/user.model.ts
 import { Schema, model } from 'mongoose';
 import bcrypt from 'bcryptjs';
 import { TUser } from './user.interface';
@@ -14,21 +13,21 @@ const userSchema = new Schema<TUser>({
   password: {
     type: String,
     required: true,
-    select: 0, // This will hide the password by default on queries
+    select: 0, 
   },
   role: {
     type: String,
-    enum: ['seller', 'buyer', 'admin'], // Ensure 'admin' is here
+    enum: ['seller', 'buyer', 'admin'], 
     required: true,
   },
-  status: { // This is the single, correct status field
+  status: {
     type: String,
     enum: ['active', 'suspended'],
     default: 'active',
   },
 }, { timestamps: true });
 
-// Mongoose pre-save hook to hash password
+
 userSchema.pre('save', async function (next) {
   if (!this.isModified('password')) {
     return next();
