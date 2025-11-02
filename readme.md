@@ -4,11 +4,6 @@ This repository contains a complete, full-stack e-commerce application built for
 
 ---
 
-### Live Demo & Credentials
-
-**(Optional: If you deploy it, add the link here)**
-- **Live Site URL:** [https://your-deployment-link.com](https://your-deployment-link.com)
-
 **Test Credentials:**
 - **Admin:** `admin@example.com` / `adminpassword`
 - **Seller:** (Register a new seller account)
