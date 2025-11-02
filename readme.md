@@ -16,6 +16,14 @@ This repository contains a complete, full-stack e-commerce application built for
 
 ---
 
+### System Architecture
+
+The application is built with a clean separation between the frontend and backend, following modern best practices for scalability and maintainability.
+
+![System Architecture Diagram](https://github.com/abrar-khan-alvi/lagbe-kichu-xyz/raw/main/system-architecture.png)
+
+---
+
 ### Core Features Implemented
 
 The application successfully implements all core requirements specified in the assessment.
@@ -54,5 +62,30 @@ The application successfully implements all core requirements specified in the a
 
 **1. Clone the repository:**
 ```bash
-git clone <your-repo-url>
-cd <project-folder>
+git clone https://github.com/abrar-khan-alvi/lagbe-kichu-xyz.git
+cd lagbe-kichu-xyz
+```
+2. Backend Setup:
+```bash
+cd backend
+npm install
+
+# Create a .env file and copy the contents of .env.example
+npm run dev
+The backend server will run on http://localhost:5000.
+```
+3. Frontend Setup (in a new terminal):
+```
+cd frontend
+npm install
+# Create a .env.local file and copy the contents of .env.example
+npm run dev
+```
+The frontend application will run on http://localhost:3000.
+4. Seed the Admin User (One-time setup):
+To create the initial admin account, run the seeder script from the backend directory.
+```
+# In the backend terminal
+npm run seed
+```
+You can now log in using the credentials provided at the top of this README.
